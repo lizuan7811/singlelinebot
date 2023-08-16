@@ -3,4 +3,4 @@ RUN mkdir /singlelilnebot
 COPY . /singlelinebot/
 WORKDIR ./singlelinebot/build/libs
 EXPOSE 8081
-ENTRYPOINT ["java","-jar","/singlelinebot/singlelinebot.jar"]
+ENTRYPOINT ["java","-jar","./singlelinebot.jar"]
