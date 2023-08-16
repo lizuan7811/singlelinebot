@@ -19,6 +19,7 @@ import javax.crypto.Mac;
 import javax.crypto.spec.*;
 import lombok.extern.slf4j.Slf4j;
 import singlelinebot.common.MessageHandler;
+import singlelinebot.service.LineBotApiService;
 
 import org.json.*;
 
@@ -28,12 +29,14 @@ import org.json.*;
 public class LineBotController {
 	
 	private final MessageHandler messageHandler;
-	public LineBotController(MessageHandler messageHandler) {
+	
+	private final LineBotApiService lineBotApiService;
+	
+	public LineBotController(MessageHandler messageHandler,LineBotApiService lineBotApiService) {
 		this.messageHandler=messageHandler;
+		this.lineBotApiService=lineBotApiService;
 	}
 
-//	TODO Configure蝣箏���潘�����inebot
-	
 	@GetMapping("/hello")
 	public String hello() {
 		log.debug(">>> hello");
@@ -62,20 +65,7 @@ public class LineBotController {
 	}
 	
 	private boolean checkFromLine(String requestBody,String xLineSignature) {
-		SecretKeySpec key=new SecretKeySpec(xLineSignature.getBytes(),"HmacSHA256");
-		Mac mac;
-		try {
-			mac=Mac.getInstance("HmacSHA256");
-			mac.init(key);
-			byte[] source=requestBody.getBytes();
-			String signature=Base64.encodeBase64String(mac.doFinal(source));
-			
-			if(signature.equals(xLineSignature)) {
-				return true;
-			}
-		}catch(NoSuchAlgorithmException | InvalidKeyException e) {
-			e.printStackTrace();
-		}
-		return false;
+		
+		return lineBotApiService.checkFromLine(requestBody, xLineSignature);
 	}
 }
