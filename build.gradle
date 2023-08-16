@@ -32,15 +32,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
+	//testImplementation 'org.springframework.security:spring-security-test'
 	
 		
-	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.security:spring-security-config:6.1.2'
-	implementation 'org.springframework.security:spring-security-web:6.1.2'
-	implementation 'org.springframework.security:spring-security-jwt:1.1.1.RELEASE'
+	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	//implementation 'org.springframework.security:spring-security-config:6.1.2'
+	//implementation 'org.springframework.security:spring-security-web:6.1.2'
+	//implementation 'org.springframework.security:spring-security-jwt:1.1.1.RELEASE'
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
-	implementation group: 'org.springframework.security', name: 'spring-security-core', version: '6.1.2'
+	//implementation group: 'org.springframework.security', name: 'spring-security-core', version: '6.1.2'
 	
 	// https://mvnrepository.com/artifact/org.projectlombok/lombok
 	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.28'

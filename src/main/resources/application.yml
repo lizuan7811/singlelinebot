@@ -4,11 +4,11 @@ server:
 spring:
   config:
     import: "classpath:db.properties,classpath:linebot/messageAPI.properties"
-  security:
-    user:
-      name: "lizuan"
-      password: "Mars@@@7811"
+#  security:
+#    user:
+#      name: "lizuan"
+#      password: "Mars@@@7811"
 logging:
-  config: 'src/main/resources/logback.xml'
+  config: 'classpath:logback.xml'
   level:
-    root: info
+    root: debug

@@ -48,7 +48,7 @@ public class LineBotController {
 	@PostMapping("/messaging")
 	public ResponseEntity messagingAPI(@RequestHeader("X-Line-Signature")String xLineSignature,@RequestBody String requestBody)throws UnsupportedEncodingException,IOException{
 		if(checkFromLine(requestBody,xLineSignature)) {
-			log.debug("撽����!");
+			log.debug("Message start!");
 			JSONObject object=new JSONObject(requestBody);
 			for(int i=0;i<object.getJSONArray("events").length();i++) {
 				 if(object.getJSONArray("events").getJSONObject(i).getString("type").equals("message")) {
@@ -57,7 +57,7 @@ public class LineBotController {
 			}
 			return new ResponseEntity<String>("OK",HttpStatus.OK);
 		}
-		log.debug("撽�����");
+		log.debug("Message end!");
 		return new ResponseEntity<String>("Not Line Platform",HttpStatus.BAD_GATEWAY);
 	}
 	
