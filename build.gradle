@@ -1,0 +1,94 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.0'
+	id 'io.spring.dependency-management' version '1.1.0'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-configuration-processor'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	
+	implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '12.2.0.jre11'
+	//***REDIS***
+	implementation 'org.springframework.data:spring-data-redis'
+	implementation 'org.springframework.boot:spring-boot-starter-parent:3.1.0'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent
+	//implementation group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '3.0.0', ext: 'pom'
+
+
+	//implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-ldap'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	
+		
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.security:spring-security-config:6.1.2'
+	implementation 'org.springframework.security:spring-security-web:6.1.2'
+	implementation 'org.springframework.security:spring-security-jwt:1.1.1.RELEASE'
+	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
+	implementation group: 'org.springframework.security', name: 'spring-security-core', version: '6.1.2'
+	
+	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.28'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+	//implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.7'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+	implementation group: 'org.apache.poi', name: 'poi', version: '5.2.3'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas
+	//implementation group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.1.2'
+	// https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad
+	implementation group: 'org.apache.poi', name: 'poi-scratchpad', version: '5.2.3'
+	// https://mvnrepository.com/artifact/commons-io/commons-io
+	implementation group: 'commons-io', name: 'commons-io', version: '2.13.0'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+	implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.3'
+    
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
+	implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '3.1.2'
+    
+    // https://mvnrepository.com/artifact/com.linecorp/linesdk
+	//implementation group: 'com.linecorp', name: 'linesdk', version: '5.3.1'
+ 
+ 	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-api-client
+	 implementation group: 'com.linecorp.bot', name: 'line-bot-api-client', version: '6.0.0'
+ 	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-model
+	implementation group: 'com.linecorp.bot', name: 'line-bot-model', version: '6.0.0'
+ 	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-parser
+	runtimeOnly group: 'com.linecorp.bot', name: 'line-bot-parser', version: '7.4.0'
+ 	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-client-base
+	implementation group: 'com.linecorp.bot', name: 'line-bot-client-base', version: '7.4.0'
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '4.0.4'
+    // https://mvnrepository.com/artifact/com.github.ulisesbocchio/jasypt-spring-boot-starter
+	implementation group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '3.0.5'
+    // https://mvnrepository.com/artifact/org.wso2.apache.httpcomponents/httpclient
+	implementation group: 'org.wso2.apache.httpcomponents', name: 'httpclient', version: '4.3.1.wso2v1'
+    // https://mvnrepository.com/artifact/com.slack.api/slack-api-client
+	implementation group: 'com.slack.api', name: 'slack-api-client', version: '1.30.0'
+    // https://mvnrepository.com/artifact/org.json/json
+	implementation group: 'org.json', name: 'json', version: '20230618'
+    
+    
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}

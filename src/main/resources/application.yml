@@ -1,0 +1,14 @@
+server:
+  port: 8081
+  debug: true
+spring:
+  config:
+    import: "classpath:db.properties,classpath:linebot/messageAPI.properties"
+  security:
+    user:
+      name: "lizuan"
+      password: "Mars@@@7811"
+logging:
+  config: 'src/main/resources/logback.xml'
+  level:
+    root: info
