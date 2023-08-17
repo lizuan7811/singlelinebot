@@ -71,9 +71,18 @@ dependencies {
  	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-model
 	implementation group: 'com.linecorp.bot', name: 'line-bot-model', version: '6.0.0'
  	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-parser
-	runtimeOnly group: 'com.linecorp.bot', name: 'line-bot-parser', version: '7.4.0'
- 	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-client-base
-	implementation group: 'com.linecorp.bot', name: 'line-bot-client-base', version: '7.4.0'
+	//runtimeOnly group: 'com.linecorp.bot', name: 'line-bot-parser', version: '7.4.0'
+ 	// https://mvnrep`ository.com/artifact/com.linecorp.bot/line-bot-client-base
+	//implementation group: 'com.linecorp.bot', name: 'line-bot-client-base', version: '7.4.0'
+	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-spring-boot
+	implementation group: 'com.linecorp.bot', name: 'line-bot-spring-boot', version: '6.0.0'
+	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-messaging-api-client
+	//implementation group: 'com.linecorp.bot', name: 'line-bot-messaging-api-client', version: '7.4.0'
+	// https://mvnrepository.com/artifact/com.linecorp.bot/line-channel-access-token-client
+	//implementation group: 'com.linecorp.bot', name: 'line-channel-access-token-client', version: '7.4.0'
+	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-spring-boot-handler
+	//implementation group: 'com.linecorp.bot', name: 'line-bot-spring-boot-handler', version: '7.4.0'
+	
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '4.0.4'
     // https://mvnrepository.com/artifact/com.github.ulisesbocchio/jasypt-spring-boot-starter

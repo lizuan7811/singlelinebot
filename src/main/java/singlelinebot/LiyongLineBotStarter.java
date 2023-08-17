@@ -10,13 +10,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 
 @SpringBootApplication
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class })
 @EnableScheduling
 @EnableEncryptableProperties
 @EnableFeignClients
 public class LiyongLineBotStarter {
-	
-	public static void main(String[]args) {
+
+	public static void main(String[] args) {
 		SpringApplication.run(LiyongLineBotStarter.class, args);
 	}
 

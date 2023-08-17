@@ -1,11 +1,7 @@
-package singlelinebot.linebot.controller;
+package singlelinebot.message.controller;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-
-import org.apache.commons.codec.binary.Base64;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +11,9 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import javax.crypto.Mac;
-import javax.crypto.spec.*;
 import lombok.extern.slf4j.Slf4j;
 import singlelinebot.common.MessageHandler;
-import singlelinebot.service.LineBotApiService;
+import singlelinebot.message.service.LineBotApiService;
 
 import org.json.*;
 
@@ -48,7 +42,7 @@ public class LineBotController {
 		return new ResponseEntity("Hello J A V A", HttpStatus.OK);
 	}
 	
-	@PostMapping("/messaging")
+	@PostMapping("/messageTest")
 	public ResponseEntity messagingAPI(@RequestHeader("X-Line-Signature")String xLineSignature,@RequestBody String requestBody)throws UnsupportedEncodingException,IOException{
 		if(checkFromLine(requestBody,xLineSignature)) {
 			log.debug("Message start!");

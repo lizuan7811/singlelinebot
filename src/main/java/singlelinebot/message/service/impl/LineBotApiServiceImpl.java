@@ -1,4 +1,4 @@
-package singlelinebot.service.impl;
+package singlelinebot.message.service.impl;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
@@ -10,8 +10,8 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.stereotype.Service;
 
+import singlelinebot.message.service.LineBotApiService;
 import singlelinebot.properties.LineBotProperties;
-import singlelinebot.service.LineBotApiService;
 @Service
 public class LineBotApiServiceImpl implements LineBotApiService {
 

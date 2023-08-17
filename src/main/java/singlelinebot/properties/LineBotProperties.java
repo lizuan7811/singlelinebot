@@ -8,10 +8,10 @@ import lombok.Data;
 @Configuration
 @Data
 public class LineBotProperties {
-	@Value("${line.msgchannel.secret}")
+	@Value("${line.bot.channelSecret}")
 	private String lineMsgChannelSecret;
 	
-	@Value("${line.msgchannel.token}")
+	@Value("${line.bot.channelToken}")
 	private String lineMsgChannelToken;
 	
 	@Value("${line.callback.reply}")

@@ -1,4 +1,4 @@
-package singlelinebot.service;
+package singlelinebot.message.service;
 
 import org.springframework.stereotype.Service;
 
