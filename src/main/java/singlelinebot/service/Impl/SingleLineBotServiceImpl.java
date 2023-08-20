@@ -34,6 +34,7 @@ public class SingleLineBotServiceImpl implements SingleLineBotService {
 	public LineUserInfo getLineUserInfo(String uid) {
 		LineUserInfo lineUserInfo = new LineUserInfo();
 		try {
+			log.debug(">>> SingleLineBotServiceImpl");
 			UserProfileResponse userProfileResponse = getClient().getProfile(uid).get();
 
 			lineUserInfo.setUid(uid);
@@ -49,7 +50,7 @@ public class SingleLineBotServiceImpl implements SingleLineBotService {
 
 	@Override
 	public LineMessagingClient getClient() {
-		return LineMessagingClient.builder(lineBotProperties.getLineMsgChannelToken()).build();
+		return LineMessagingClient.builder(lineBotProperties.getLineBotChannelToken()).build();
 	}
 
 	@Override

@@ -7,20 +7,27 @@ import lombok.Data;
 
 @Configuration
 @Data
-public class LineBotProperties {
+public class LineBotProperties {	
+	@Value("${line.bot.apidatabaseurl}")
+	private String lineBotApiDataBaseUrl;
+	
 	@Value("${line.bot.channelSecret}")
-	private String lineMsgChannelSecret;
+	private String lineBotChannelSecret;
 	
 	@Value("${line.bot.channelToken}")
-	private String lineMsgChannelToken;
+	private String lineBotChannelToken;
 	
-	@Value("${line.callback.reply}")
-	private String lineCallbackReply;
+	@Value("${line.bot.replyuri}")
+	private String lineBotReplyUri;
 	
-	@Value("${line.callback.push}")
-	private String lineCallbackPush;
+	@Value("${line.bot.pushuri}")
+	private String lineBotPushUri;
 	
 	@Value("${line.user.id}")
 	private String lineUserId;
 	
+	@Value("${line.bot.contenturi}")
+	private String contentUri;
+
+
 }

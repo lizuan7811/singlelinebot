@@ -31,7 +31,7 @@ public class DefaultHandler {
 		log.debug(">>> ReplyToken: {}",event.getReplyToken());
 
 		singleLineBotService.getLineUserInfo(event.getSource().getUserId());
-		singleLineBotService.replyTextMessage(event.getReplyToken(),"測試使用TEST!");
+		singleLineBotService.replyTextMessage(event.getReplyToken(),"Welcom to Follow!");
 	}
 	
 	

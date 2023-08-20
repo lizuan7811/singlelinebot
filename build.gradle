@@ -67,21 +67,25 @@ dependencies {
 	//implementation group: 'com.linecorp', name: 'linesdk', version: '5.3.1'
  
  	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-api-client
-	 implementation group: 'com.linecorp.bot', name: 'line-bot-api-client', version: '6.0.0'
+	implementation group: 'com.linecorp.bot', name: 'line-bot-api-client', version: '6.0.0'
  	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-model
 	implementation group: 'com.linecorp.bot', name: 'line-bot-model', version: '6.0.0'
+	implementation group: 'com.linecorp.bot', name: 'line-bot-spring-boot', version: '6.0.0'
+		
  	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-parser
 	//runtimeOnly group: 'com.linecorp.bot', name: 'line-bot-parser', version: '7.4.0'
  	// https://mvnrep`ository.com/artifact/com.linecorp.bot/line-bot-client-base
-	//implementation group: 'com.linecorp.bot', name: 'line-bot-client-base', version: '7.4.0'
-	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-spring-boot
-	implementation group: 'com.linecorp.bot', name: 'line-bot-spring-boot', version: '6.0.0'
+	implementation group: 'com.linecorp.bot', name: 'line-bot-client-base', version: '7.4.0'
 	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-messaging-api-client
 	//implementation group: 'com.linecorp.bot', name: 'line-bot-messaging-api-client', version: '7.4.0'
 	// https://mvnrepository.com/artifact/com.linecorp.bot/line-channel-access-token-client
 	//implementation group: 'com.linecorp.bot', name: 'line-channel-access-token-client', version: '7.4.0'
 	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-spring-boot-handler
 	//implementation group: 'com.linecorp.bot', name: 'line-bot-spring-boot-handler', version: '7.4.0'
+	// https://mvnrepository.com/artifact/com.linecorp.bot/line-bot-webhook
+	implementation 'com.linecorp.bot:line-bot-webhook:7.4.0'
+
+
 	
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '4.0.4'
@@ -93,7 +97,6 @@ dependencies {
 	implementation group: 'com.slack.api', name: 'slack-api-client', version: '1.30.0'
     // https://mvnrepository.com/artifact/org.json/json
 	implementation group: 'org.json', name: 'json', version: '20230618'
-    
     
 }
 

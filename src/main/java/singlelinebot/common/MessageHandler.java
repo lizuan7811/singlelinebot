@@ -61,7 +61,7 @@ public class MessageHandler {
 		 }
 
 		 public void sendLinePlatform(JSONObject json) {
-			 Request request=new Request.Builder().url("https://api.line.me/v2/bot/message/reply").header("Authorization","Bearer {"+lineBotProperties.getLineMsgChannelToken()+"}").post(RequestBody.create(MediaType.parse("application/json;charset=utf-8"),json.toString())).build();
+			 Request request=new Request.Builder().url("https://api.line.me/v2/bot/message/reply").header("Authorization","Bearer {"+lineBotProperties.getLineBotChannelToken()+"}").post(RequestBody.create(MediaType.parse("application/json;charset=utf-8"),json.toString())).build();
 			 client.newCall(request).enqueue(new Callback() {
 
 				@Override

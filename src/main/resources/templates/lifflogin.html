@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>LIFF - 讓 C# 也能很 Social 用戶資料</title>
+<!-- LIFF SDK CDN include -->
+<script charset="utf-8"	src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<script>
+window.onload = () => {
+    const defaultLiffId = '2000468524-BGX34p74';
+    $(document).ready(function () {
+        liffInit(defaultLiffId);
+    });
+}
+
+function liffInit(liffId) {
+    // withLoginOnExternalBrowser : true 時代表 auto login 啟動，LIFF 初始化後會自動呼叫 liff.login 登入。
+    liff.init({ liffId: liffId, withLoginOnExternalBrowser: true }).then(() => {
+        // liff init 成功，可以隨意使用 liff sdk apis
+        $("#os").text(liff.getOS());
+        $("#language").text(liff.getLanguage());
+        $("#version").text(liff.getVersion());
+        $("#lineVersion").text(liff.getLineVersion());
+        $("#isInClient").text(liff.isInClient());
+    }).catch((err) => {
+        // log error
+        console.log(err.code, err.message);
+    })
+}
+</script>
+
+<!-- 導入網頁登入line的帳號後，自動做身分驗證，如果資料庫中存在line的帳號，驗證認證成功，轉址到登入後畫面；否則拒絕登入/或是提供註冊畫面。
+把功能區分多個menu icon做，或是使用一個icon去登入，登入後可以再選擇menu項目轉到想要的畫面。 -->
+<body>
+	HTLLO
+	<center>
+		<div class="container">
+			<a> -------- 環境 -------- </a> <a>OS : <b id="os"></b></a> <a>Language
+				: <b id="language"></b>
+			</a> <a>Version : <b id="version"></b></a> <a>Line Version : <b
+				id="lineVersion"></b></a> <a>IsInClient : <b id="isInClient"></b></a>
+		</div>
+	</center>
+</body>
+</html>

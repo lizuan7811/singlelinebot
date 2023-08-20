@@ -23,7 +23,7 @@ public class LineBotApiServiceImpl implements LineBotApiService {
 	
 	@Override
 	public boolean checkFromLine(String requestBody, String xLineSignature) {
-		SecretKeySpec key=new SecretKeySpec(lineBotProperties.getLineMsgChannelSecret().getBytes(),"HmacSHA256");
+		SecretKeySpec key=new SecretKeySpec(lineBotProperties.getLineBotChannelSecret().getBytes(),"HmacSHA256");
 		Mac mac;
 		try {
 			mac=Mac.getInstance("HmacSHA256");

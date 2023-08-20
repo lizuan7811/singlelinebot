@@ -3,7 +3,7 @@ server:
   debug: true
 spring:
   config:
-    import: "classpath:db.properties,classpath:linebot/messageAPI.properties"
+    import: "classpath:db.properties,classpath:linebot/messageAPI.properties,classpath:linebot/lineLogin.properties"
 #  security:
 #    user:
 #      name: "lizuan"
